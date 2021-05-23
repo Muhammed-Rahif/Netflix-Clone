@@ -25,7 +25,7 @@
   top: 0;
   position: absolute;
   background-image: linear-gradient(
-    rgba(17, 17, 17, 0.8),
+    rgba(17, 17, 17, 1.9),
     rgba(255, 255, 255, 0)
   );
 }
