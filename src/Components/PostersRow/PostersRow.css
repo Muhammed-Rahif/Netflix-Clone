@@ -1,67 +1,67 @@
 .posters-wrapper {
-  margin-top: 1rem;
-  margin-bottom: 3rem;
+  display: flex;
+  padding-left: 2%;
+  padding-right: 2%;
   color: white;
   font-family: "Open Sans", sans-serif;
-  /* width: 100%;
-  height: 100%;
-  overflow: hidden; */
 }
 .posters-title {
-  margin-left: 1.5rem;
+  margin-top: 1.5rem;
+  margin-left: 2rem;
+  color: white;
 }
 .posters-title h3{
     font-weight: bold;
 }
-.posters {
-  margin-left: 1.5rem;
-  height: 40vh;
-  /* padding-right: 17px; Increase/decrease this value for cross-browser compatibility 
-  box-sizing: content-box;  So the width will be 100% + 17px */
-}
 .poster-card {
-  width: 16rem;
-  height: 100%;
   position: relative;
+  display: block;
+  flex: 1 1 0px;
+  transition: transform 500ms;
+  z-index: 65;
+  margin: 0.3rem;
   cursor: pointer;
-  padding-left: 0;
-  padding-right: 1rem;
-  transition: transform 0.5s;
 }
-.poster-card:hover {
+.posters-wrapper:focus-within .poster-card,
+.posters-wrapper:hover .poster-card {
+  transform: translateX(-25%);
+  z-index: 70;
+}
+
+.poster-card:focus ~ .poster-card,
+.poster-card:hover ~ .poster-card {
   transform: translateX(25%);
-  transform: scale(1.2);
-  z-index: 30;
 }
-.poster-image {
-  width: 100%;
-  height: 100%;
+
+.posters-wrapper .poster-card:focus,
+.posters-wrapper .poster-card:hover {
+  transform: scale(1.5);
 }
-.poster-title {
-  font-weight: bold;
-}
-.poster-subtitle {
-  font-weight: normal;
+
+.poster-card .img {
+  display: block;
+  max-width: 100%;
 }
 .poster-text-wrapper {
   padding: 1rem;
-  transition: .5s;
-  padding-top: 10rem;
-  z-index: 65;
-  opacity: 0;
-  bottom: 0;
+  color: whitesmoke;
   position: absolute;
+  bottom: 0;
+  transition: .5s;
+  opacity: 0;
+  z-index: 50;
 }
-.poster-card:hover .poster-text-wrapper{
-    opacity: 1;
+.poster-card:focus,
+.poster-card:hover .poster-text-wrapper {
+  opacity: 1;
 }
 .dark-fade-top {
   top: 0;
   position: absolute;
   height: 2rem;
-  width: 95%;
+  width: 100%;
   background-image: linear-gradient(
-    rgba(17, 17, 17, 0.8),
+    rgba(17, 17, 17, 0.9),
     rgba(255, 255, 255, 0)
   );
 }
@@ -69,9 +69,13 @@
   bottom: 0;
   position: absolute;
   height: 8rem;
-  width: 95%;
+  width: 100%;
   background-image: linear-gradient(
     rgba(255, 255, 255, 0),
     rgba(17, 17, 17, 0.9)
   );
+}
+.poster-title{
+  text-shadow: 4px 4px 6px black;
+  font-weight: bold;
 }

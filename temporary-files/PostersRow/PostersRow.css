@@ -1,0 +1,72 @@
+.posters-wrapper {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+}
+.posters-title {
+  margin-left: 1.5rem;
+}
+.posters-title h3{
+    font-weight: bold;
+}
+.posters {
+  margin-left: 1.5rem;
+  height: 40vh;
+}
+.poster-card {
+  width: 16rem;
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+  padding-left: 0;
+  padding-right: 1rem;
+  transition: transform 0.5s;
+}
+.poster-card:hover {
+  transform: translateX(25%);
+  transform: scale(1.2);
+  z-index: 30;
+}
+.poster-image {
+  width: 100%;
+  height: 100%;
+}
+.poster-title {
+  font-weight: bold;
+}
+.poster-subtitle {
+  font-weight: normal;
+}
+.poster-text-wrapper {
+  padding: 1rem;
+  transition: .5s;
+  padding-top: 10rem;
+  z-index: 65;
+  opacity: 0;
+  bottom: 0;
+  position: absolute;
+}
+.poster-card:hover .poster-text-wrapper{
+    opacity: 1;
+}
+.dark-fade-top {
+  top: 0;
+  position: absolute;
+  height: 2rem;
+  width: 95%;
+  background-image: linear-gradient(
+    rgba(17, 17, 17, 0.8),
+    rgba(255, 255, 255, 0)
+  );
+}
+.dark-fade-bottom {
+  bottom: 0;
+  position: absolute;
+  height: 8rem;
+  width: 95%;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0),
+    rgba(17, 17, 17, 0.9)
+  );
+}
