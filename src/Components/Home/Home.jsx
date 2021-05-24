@@ -47,6 +47,83 @@ function Home(props) {
     ],
   };
 
+  const POPULAR_POSTERS_DATA_FROM_SERVER = {
+    postersTitle: "Popular on Netflx",
+    postersList: [
+      {
+        title: "Avatar",
+        subtitle:
+          "Avatar is a 2009 American epic science fiction film directed, written, produced, and co-edited by James Cameron and starring Sam Worthington, Zoe Saldana,...",
+        imgSrc: "./images/backend/avatar-card.jpg",
+      },
+      {
+        title: "Thor",
+        subtitle:
+          "Thor is a 2011 American superhero film based on the Marvel Comics character of the same name. Produced by Marvel Studios and distributed by Paramount ...",
+        imgSrc: "./images/backend/thor-card.jpg",
+      },
+      {
+        title: "How To Train Your Dragon",
+        subtitle:
+          "Hiccup and Toothless are faced with the threat of Drago, a dragon trapper, bent on capturing and dominating over all dragons.",
+        imgSrc: "./images/backend/train-your-dragon-card.jpg",
+      },
+      {
+        title: "Captain America : Civil War",
+        subtitle:
+          "Captain America: Civil War is a 2016 American superhero film based on the Marvel Comics character Captain America, produced by Marvel Studios",
+        imgSrc: "./images/backend/civil-war-card.jpg",
+      },
+      {
+        title: "Ant Man",
+        subtitle:
+          "Ant-Man and the Wasp: Quantumania — Ant-Man is a 2015 American superhero film based on the Marvel Comics characters of the same ...",
+        imgSrc: "./images/backend/ant-man-card.jpg",
+      },
+      {
+        title: "Transformers: The Last Knight",
+        subtitle:
+          "Transformers: The Last Knight is a 2017 American science fiction action film based on the Transformers toy line. It is the fifth installment of the live-action ...",
+        imgSrc: "./images/backend/transformers-card.jpg",
+      },
+    ],
+  };
+
+  const MALAYALAM_POSTERS_DATA_FROM_SERVER = {
+    postersTitle: "Malayalam on Netflx",
+    postersList: [
+      {
+        title: "The Priest",
+        subtitle:
+          "The Priest is a 2021 Indian Malayalam-language supernatural horror mystery film directed by debutant Jofin T. Chacko,which marks the first collaboration of ...",
+        imgSrc: "./images/backend/priest-card.jpg",
+      },
+      {
+        title: "The One",
+        subtitle:
+          "One is a 2021 Indian Malayalam-language political drama film directed by Santhosh Vishwanath and written by Bobby & Sanjay. The film stars Mammootty, ...",
+        imgSrc: "./images/backend/one-card.jpg",
+      },
+      {
+        title: "Irul",
+        subtitle:
+          "When a car breakdown forces a couple to seek shelter in a nearby home, conversations with the stranger inside soon suggest there's a killer among them.",
+        imgSrc: "./images/backend/irul-card.jpg",
+      },
+      {
+        title: "Nayattu",
+        subtitle:
+          "Nayattu is a 2021 Indian Malayalam-language social thriller tragedy film directed and co-produced by Martin Prakkat and written by Shahi Kabir.",
+        imgSrc: "./images/backend/nayattu-card.jpg",
+      },
+      {
+        title: "Maniyarayile Ashokan",
+        subtitle:
+          "Ashokan desperately wishes to get married as he is past the marriageable age. However, bad luck and a series of unfortunate circumstances threaten to make this a distant dream.",
+        imgSrc: "./images/backend/maniyarayile-ashokan-card.jpg",
+      },
+    ],
+  };
 
   return (
     <div className="row">
@@ -55,6 +132,14 @@ function Home(props) {
       <PostersRow
         postersTitle={TRENDING_POSTERS_DATA_FROM_SERVER.postersTitle}
         postersList={TRENDING_POSTERS_DATA_FROM_SERVER.postersList}
+      />
+      <PostersRow
+        postersTitle={POPULAR_POSTERS_DATA_FROM_SERVER.postersTitle}
+        postersList={POPULAR_POSTERS_DATA_FROM_SERVER.postersList}
+      />
+      <PostersRow
+        postersTitle={MALAYALAM_POSTERS_DATA_FROM_SERVER.postersTitle}
+        postersList={MALAYALAM_POSTERS_DATA_FROM_SERVER.postersList}
       />
     </div>
   );
