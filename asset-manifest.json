@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/Netflix-Clone-React/static/css/main.ed42148c.chunk.css",
-    "main.js": "/Netflix-Clone-React/static/js/main.1d48747d.chunk.js",
-    "main.js.map": "/Netflix-Clone-React/static/js/main.1d48747d.chunk.js.map",
+    "main.css": "/Netflix-Clone-React/static/css/main.1e2f5745.chunk.css",
+    "main.js": "/Netflix-Clone-React/static/js/main.c7d81445.chunk.js",
+    "main.js.map": "/Netflix-Clone-React/static/js/main.c7d81445.chunk.js.map",
     "runtime-main.js": "/Netflix-Clone-React/static/js/runtime-main.73b5d56a.js",
     "runtime-main.js.map": "/Netflix-Clone-React/static/js/runtime-main.73b5d56a.js.map",
     "static/js/2.ad444983.chunk.js": "/Netflix-Clone-React/static/js/2.ad444983.chunk.js",
@@ -12,13 +12,13 @@
     "index.html": "/Netflix-Clone-React/index.html",
     "service-worker.js": "/Netflix-Clone-React/service-worker.js",
     "service-worker.js.map": "/Netflix-Clone-React/service-worker.js.map",
-    "static/css/main.ed42148c.chunk.css.map": "/Netflix-Clone-React/static/css/main.ed42148c.chunk.css.map",
+    "static/css/main.1e2f5745.chunk.css.map": "/Netflix-Clone-React/static/css/main.1e2f5745.chunk.css.map",
     "static/js/2.ad444983.chunk.js.LICENSE.txt": "/Netflix-Clone-React/static/js/2.ad444983.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.73b5d56a.js",
     "static/js/2.ad444983.chunk.js",
-    "static/css/main.ed42148c.chunk.css",
-    "static/js/main.1d48747d.chunk.js"
+    "static/css/main.1e2f5745.chunk.css",
+    "static/js/main.c7d81445.chunk.js"
   ]
 }
