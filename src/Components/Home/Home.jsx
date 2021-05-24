@@ -123,6 +123,12 @@ function Home(props) {
           "Ashokan desperately wishes to get married as he is past the marriageable age. However, bad luck and a series of unfortunate circumstances threaten to make this a distant dream.",
         imgSrc: "./images/backend/maniyarayile-ashokan-card.jpg",
       },
+      {
+        title: "Drishyam 2",
+        subtitle:
+          "Georgekutty, a cinema hall owner, thrives in life but is a changed man. However, when his family gets entangled in a criminal investigation,...",
+        imgSrc: "./images/backend/drishyam-2-card.jpg",
+      },
     ],
   };
 
