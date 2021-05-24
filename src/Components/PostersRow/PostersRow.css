@@ -10,8 +10,8 @@
   margin-left: 2rem;
   color: white;
 }
-.posters-title h3{
-    font-weight: bold;
+.posters-title h3 {
+  font-weight: bold;
 }
 .poster-card {
   position: relative;
@@ -47,7 +47,7 @@
   color: whitesmoke;
   position: absolute;
   bottom: 0;
-  transition: .5s;
+  transition: 0.5s;
   opacity: 0;
   z-index: 50;
 }
@@ -75,7 +75,10 @@
     rgba(17, 17, 17, 0.9)
   );
 }
-.poster-title{
+.poster-title {
   text-shadow: 4px 4px 6px black;
   font-weight: bold;
+}
+.poster-subtitle {
+  text-shadow: 4px 4px 6px black;
 }

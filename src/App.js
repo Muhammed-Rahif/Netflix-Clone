@@ -6,12 +6,12 @@ import NotFound from "./Components/NotFound/NotFound";
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Switch>
-        <Route exact path="/" basename={"/Netflix-Clone-React"} component={Home}>
+        <Route path="/" component={Home}>
           <Home />
         </Route>
-        <Route component={NotFound} />
+        <Route path="" component={NotFound} />
       </Switch>
     </Router>
   );

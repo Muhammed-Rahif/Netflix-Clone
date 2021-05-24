@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 import $ from "jquery";
 
 function Navbar(props) {
@@ -37,34 +38,34 @@ function Navbar(props) {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-black">
       <div className="container-fluid">
-        <a className="navbar-brand" href="/">
+        <Link className="navbar-brand" href="/">
           <img src="./images/netflix-logo.png" alt="Netflix" width="124" />
-        </a>
+        </Link>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a
+              <Link
                 className="nav-link active"
                 aria-current="page"
                 href="/tv-shows"
               >
                 TV Shows
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/movies">
+              <Link className="nav-link" href="/movies">
                 Movies
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/recents">
+              <Link className="nav-link" href="/recents">
                 Recently Added
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/my-list">
+              <Link className="nav-link" href="/my-list">
                 My List
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
