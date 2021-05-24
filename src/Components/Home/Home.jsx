@@ -49,14 +49,14 @@ function Home(props) {
 
 
   return (
-    <React.Fragment>
+    <div className="row">
       <Navbar />
       <HeaderBanner />
       <PostersRow
         postersTitle={TRENDING_POSTERS_DATA_FROM_SERVER.postersTitle}
         postersList={TRENDING_POSTERS_DATA_FROM_SERVER.postersList}
       />
-    </React.Fragment>
+    </div>
   );
 }
 

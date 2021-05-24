@@ -45,9 +45,9 @@ function PostersRow2({ postersTitle, postersList }) {
         </React.Fragment>
       ) : (
         <div className="posters-wrapper">
-          {postersList.map((itm) => {
+          {postersList.map((itm,indx) => {
             return (
-              <div className="poster-card">
+              <div className="poster-card" key={indx}>
                 <div className="dark-fade-top"></div>
                 <img className="img" src={itm.imgSrc} alt="Poster Card" />
                 <div className="poster-text-wrapper">

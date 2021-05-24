@@ -7,11 +7,9 @@ function App() {
   return (
     <Router>
       <Switch>
-        <div className="row">
-          <Route exact path="/">
-            <Home />
-          </Route>
-        </div>
+        <Route exact path="/">
+          <Home />
+        </Route>
       </Switch>
     </Router>
   );
