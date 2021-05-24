@@ -1,17 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./PostersRow.css";
 
 function PostersRow2({ postersTitle, postersList }) {
+  const [onMobile, setOnMobile] = useState(false);
+
+  useEffect(() => {
+    setOnMobile(Boolean(window.innerWidth < 767));
+  });
+  console.log(onMobile);
+  console.log(window.innerWidth);
   var prevItm;
   return (
     <React.Fragment>
       <div className="posters-title">
         <h3>{postersTitle}</h3>
       </div>
-      {window.innerWidth < 650 ? (
+      {onMobile ? (
         <React.Fragment>
           {postersList.map((itm, indx) => {
-            if ((indx+1) % 2 === 0) {
+            if ((indx + 1) % 2 === 0) {
               return (
                 <div className="posters-wrapper" key={indx}>
                   <div className="poster-card">
@@ -45,7 +52,7 @@ function PostersRow2({ postersTitle, postersList }) {
         </React.Fragment>
       ) : (
         <div className="posters-wrapper">
-          {postersList.map((itm,indx) => {
+          {postersList.map((itm, indx) => {
             return (
               <div className="poster-card" key={indx}>
                 <div className="dark-fade-top"></div>

@@ -38,7 +38,7 @@ function Navbar(props) {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-black">
       <div className="container-fluid">
-        <Link className="navbar-brand" href="/">
+        <Link className="navbar-brand" to="/">
           <img src="./images/netflix-logo.png" alt="Netflix" width="124" />
         </Link>
         <div className="collapse navbar-collapse" id="navbarNav">
@@ -47,23 +47,23 @@ function Navbar(props) {
               <Link
                 className="nav-link active"
                 aria-current="page"
-                href="/tv-shows"
+                to="/tv-shows"
               >
                 TV Shows
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" href="/movies">
+              <Link className="nav-link" to="/movies">
                 Movies
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" href="/recents">
+              <Link className="nav-link" to="/recents">
                 Recently Added
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" href="/my-list">
+              <Link className="nav-link" to="/my-list">
                 My List
               </Link>
             </li>
