@@ -1,0 +1,33 @@
+.content {
+  width: 100%;
+  height: 86.5vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  text-shadow: 3px 3px 8px black;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  font-family: "Open Sans", sans-serif;
+}
+.content h1,
+.content h4,
+.btn,
+.error-code {
+  z-index: 65;
+  font-weight: bold;
+}
+.content .btn{
+    background-color: #e6e6e6;
+}
+.content .btn:hover{
+    opacity: .85;
+}
+.error-code{
+    border-left: 1px red solid;
+    padding-left: 1.5rem;
+}
