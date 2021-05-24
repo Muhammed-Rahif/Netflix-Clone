@@ -8,7 +8,7 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/" basename={process.env.PUBLIC_URL} component={Home}>
+        <Route exact path="/" basename={"/Netflix-Clone-React"} component={Home}>
           <Home />
         </Route>
         <Route component={NotFound} />
