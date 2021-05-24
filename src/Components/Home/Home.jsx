@@ -3,6 +3,7 @@ import React from "react";
 import Navbar from "../Navbar/Navbar";
 import HeaderBanner from "../HeaderBanner/HeaderBanner";
 import PostersRow from "../PostersRow/PostersRow";
+import Footer from "../Footer/Footer";
 
 function Home(props) {
   const TRENDING_POSTERS_DATA_FROM_SERVER = {
@@ -141,6 +142,7 @@ function Home(props) {
         postersTitle={MALAYALAM_POSTERS_DATA_FROM_SERVER.postersTitle}
         postersList={MALAYALAM_POSTERS_DATA_FROM_SERVER.postersList}
       />
+      <Footer/>
     </div>
   );
 }

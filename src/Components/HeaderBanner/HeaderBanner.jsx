@@ -8,7 +8,7 @@ function HeaderBanner(props) {
       <div
         className="header-banner"
         style={{
-          backgroundImage: "url(../images/backend/The-Avengers-banner-1.jpg)",
+          backgroundImage: "url(./images/backend/The-Avengers-banner-1.jpg)",
         }}
       >
         <div className="dark-shade-top"></div>
