@@ -1,15 +1,20 @@
-import React from "react";
+import React,{ useEffect } from "react";
 import "./HeaderBanner.css";
-import $ from "jquery";
+
+// Lozad
+import lozad from "lozad";
 
 function HeaderBanner(props) {
+  useEffect(()=>{
+    const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+    observer.observe();
+  },[])
+
   return (
     <React.Fragment>
       <div
-        className="header-banner"
-        style={{
-          backgroundImage: "url(./images/backend/The-Avengers-banner-1.jpg)",
-        }}
+        className="header-banner lozad"
+        data-background-image="./images/backend/The-Avengers-banner-1.jpg"
       >
         <div className="dark-shade-top"></div>
         <div className="left-inner">

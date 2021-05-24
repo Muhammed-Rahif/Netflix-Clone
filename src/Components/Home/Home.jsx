@@ -7,7 +7,7 @@ import Footer from "../Footer/Footer";
 
 function Home(props) {
   const TRENDING_POSTERS_DATA_FROM_SERVER = {
-    postersTitle: "Trending on Netflx",
+    postersTitle: "Trending on Netflix",
     postersList: [
       {
         title: "Spider Man",
@@ -49,7 +49,7 @@ function Home(props) {
   };
 
   const POPULAR_POSTERS_DATA_FROM_SERVER = {
-    postersTitle: "Popular on Netflx",
+    postersTitle: "Popular on Netflix",
     postersList: [
       {
         title: "Avatar",
@@ -91,7 +91,7 @@ function Home(props) {
   };
 
   const MALAYALAM_POSTERS_DATA_FROM_SERVER = {
-    postersTitle: "Malayalam on Netflx",
+    postersTitle: "Malayalam on Netflix",
     postersList: [
       {
         title: "The Priest",

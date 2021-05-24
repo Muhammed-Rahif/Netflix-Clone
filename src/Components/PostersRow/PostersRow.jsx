@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from "react";
 import "./PostersRow.css";
 
+// Lozad
+import lozad from "lozad";
+
 function PostersRow2({ postersTitle, postersList }) {
   const [onMobile, setOnMobile] = useState(false);
 
   useEffect(() => {
     setOnMobile(Boolean(window.innerWidth < 767));
-  });
-  console.log(onMobile);
-  console.log(window.innerWidth);
+    const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+    observer.observe();
+  }, []);
+
   var prevItm;
   return (
     <React.Fragment>
@@ -24,8 +28,8 @@ function PostersRow2({ postersTitle, postersList }) {
                   <div className="poster-card">
                     <div className="dark-fade-top"></div>
                     <img
-                      className="img"
-                      src={prevItm.imgSrc}
+                      className="img lozad"
+                      data-src={prevItm.imgSrc}
                       alt="Poster Card"
                     />
                     <div className="poster-text-wrapper">
@@ -36,7 +40,11 @@ function PostersRow2({ postersTitle, postersList }) {
                   </div>
                   <div className="poster-card">
                     <div className="dark-fade-top"></div>
-                    <img className="img" src={itm.imgSrc} alt="Poster Card" />
+                    <img
+                      className="img lozad"
+                      data-src={itm.imgSrc}
+                      alt="Poster Card"
+                    />
                     <div className="poster-text-wrapper">
                       <h5 className="poster-title">{itm.title}</h5>
                       <p className="poster-subtitle">{itm.subtitle}</p>
@@ -56,7 +64,11 @@ function PostersRow2({ postersTitle, postersList }) {
             return (
               <div className="poster-card" key={indx}>
                 <div className="dark-fade-top"></div>
-                <img className="img" src={itm.imgSrc} alt="Poster Card" />
+                <img
+                  className="img lozad"
+                  data-src={itm.imgSrc}
+                  alt="Poster Card"
+                />
                 <div className="poster-text-wrapper">
                   <h5 className="poster-title">{itm.title}</h5>
                   <p className="poster-subtitle">{itm.subtitle}</p>
