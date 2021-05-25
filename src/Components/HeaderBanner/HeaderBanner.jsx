@@ -1,14 +1,8 @@
-import React,{ useEffect } from "react";
+import React from "react";
 import "./HeaderBanner.css";
 
-// Lozad
-import lozad from "lozad";
 
 function HeaderBanner(props) {
-  useEffect(()=>{
-    const observer = lozad(); // lazy loads elements with default selector as '.lozad'
-    observer.observe();
-  },[])
 
   return (
     <React.Fragment>

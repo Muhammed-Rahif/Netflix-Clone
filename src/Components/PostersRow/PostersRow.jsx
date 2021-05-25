@@ -1,16 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "./PostersRow.css";
 
-// Lozad
-import lozad from "lozad";
 
-function PostersRow2({ postersTitle, postersList }) {
+function PostersRow({ postersTitle, postersList }) {
   const [onMobile, setOnMobile] = useState(false);
 
   useEffect(() => {
     setOnMobile(Boolean(window.innerWidth < 767));
-    const observer = lozad(); // lazy loads elements with default selector as '.lozad'
-    observer.observe();
   }, []);
 
   var prevItm;
@@ -83,4 +79,4 @@ function PostersRow2({ postersTitle, postersList }) {
   );
 }
 
-export default PostersRow2;
+export default PostersRow;

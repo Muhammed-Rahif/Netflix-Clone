@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 // components
 import Navbar from "../Navbar/Navbar";
 import HeaderBanner from "../HeaderBanner/HeaderBanner";
 import PostersRow from "../PostersRow/PostersRow";
 import Footer from "../Footer/Footer";
 
+// Lozad
+import lozad from "lozad";
+
 function Home(props) {
+  useEffect(() => {
+    window.onload = () => {
+      const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+      observer.observe();
+    };
+  });
+
   const TRENDING_POSTERS_DATA_FROM_SERVER = {
     postersTitle: "Trending on Netflix",
     postersList: [
@@ -148,7 +158,7 @@ function Home(props) {
         postersTitle={MALAYALAM_POSTERS_DATA_FROM_SERVER.postersTitle}
         postersList={MALAYALAM_POSTERS_DATA_FROM_SERVER.postersList}
       />
-      <Footer/>
+      <Footer />
     </div>
   );
 }
