@@ -82,3 +82,14 @@
 .poster-subtitle {
   text-shadow: 4px 4px 6px black;
 }
+@media (max-width:767px) {
+  .poster-title {
+    text-shadow: 4px 4px 6px black;
+    font-weight: bold;
+    font-size: small;
+  }
+  .poster-subtitle {
+    text-shadow: 4px 4px 6px black;
+    font-size: small;
+  }
+}
