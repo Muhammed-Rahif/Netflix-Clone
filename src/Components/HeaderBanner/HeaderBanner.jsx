@@ -9,6 +9,7 @@ function HeaderBanner(props) {
       <div
         className="header-banner lozad"
         data-background-image="./images/backend/The-Avengers-banner-1.jpg"
+        data-placeholder-background="#222222e6"
       >
         <div className="dark-shade-top"></div>
         <div className="left-inner">
