@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
+import PlayButton from "../PlayButton/PlayButton";
 import "./PostersRow.css";
-
 
 function PostersRow({ postersTitle, postersList }) {
   const [onMobile, setOnMobile] = useState(false);
@@ -29,9 +29,12 @@ function PostersRow({ postersTitle, postersList }) {
                       data-placeholder-background="#222222e6"
                       alt="Poster Card"
                     />
+                    <PlayButton />
                     <div className="poster-text-wrapper">
                       <h5 className="poster-title">{prevItm.title}</h5>
-                      <p className="poster-subtitle">{prevItm.subtitle}</p>
+                      <p className="poster-subtitle">
+                        {prevItm.subtitle.substring(0, 50) + "..."}
+                      </p>
                     </div>
                     <div className="dark-fade-bottom"></div>
                   </div>
@@ -43,9 +46,12 @@ function PostersRow({ postersTitle, postersList }) {
                       data-placeholder-background="#222222e6"
                       alt="Poster Card"
                     />
+                    <PlayButton />
                     <div className="poster-text-wrapper">
                       <h5 className="poster-title">{itm.title}</h5>
-                      <p className="poster-subtitle">{itm.subtitle}</p>
+                      <p className="poster-subtitle">
+                        {itm.subtitle.substring(0, 50) + "..."}
+                      </p>
                     </div>
                     <div className="dark-fade-bottom"></div>
                   </div>
@@ -68,9 +74,12 @@ function PostersRow({ postersTitle, postersList }) {
                   data-placeholder-background="#222222e6"
                   alt="Poster Card"
                 />
+                <PlayButton />
                 <div className="poster-text-wrapper">
                   <h5 className="poster-title">{itm.title}</h5>
-                  <p className="poster-subtitle">{itm.subtitle}</p>
+                  <p className="poster-subtitle">
+                    {itm.subtitle.substring(0, 75) + "..."}
+                  </p>
                 </div>
                 <div className="dark-fade-bottom"></div>
               </div>

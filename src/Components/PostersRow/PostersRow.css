@@ -20,7 +20,6 @@
   transition: transform 500ms;
   z-index: 65;
   margin: 0.3rem;
-  cursor: pointer;
 }
 .posters-wrapper:focus-within .poster-card,
 .posters-wrapper:hover .poster-card {
@@ -53,6 +52,9 @@
 }
 .poster-card:focus,
 .poster-card:hover .poster-text-wrapper {
+  opacity: 1;
+}
+.poster-card:hover .play-button-wrapper {
   opacity: 1;
 }
 .dark-fade-top {
