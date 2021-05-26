@@ -26,7 +26,7 @@ function PostersRow({ postersTitle, postersList }) {
                     <img
                       className="img lozad"
                       data-src={prevItm.imgSrc}
-                      data-placeholder-background="#222222e6"
+                      style={{backgroundColor:"#222222e6"}}
                       alt="Poster Card"
                     />
                     <PlayButton />
@@ -43,7 +43,7 @@ function PostersRow({ postersTitle, postersList }) {
                     <img
                       className="img lozad"
                       data-src={itm.imgSrc}
-                      data-placeholder-background="#222222e6"
+                      style={{backgroundColor:"#222222e6"}}
                       alt="Poster Card"
                     />
                     <PlayButton />
@@ -71,7 +71,7 @@ function PostersRow({ postersTitle, postersList }) {
                 <img
                   className="img lozad"
                   data-src={itm.imgSrc}
-                  data-placeholder-background="#222222e6"
+                  style={{background:"#222222e6"}}
                   alt="Poster Card"
                 />
                 <PlayButton />

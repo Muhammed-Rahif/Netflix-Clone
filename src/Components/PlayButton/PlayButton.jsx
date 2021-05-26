@@ -8,9 +8,9 @@ function PlayButton(props) {
     <div className="play-button-wrapper">
       <button onClick={()=>{ setPlayButton(!playButton) }}>
         {playButton ? (
-          <i class="far fa-play-circle"></i>
+          <i className="far fa-play-circle"></i>
         ) : (
-          <i class="far fa-pause-circle"></i>
+          <i className="far fa-pause-circle"></i>
         )}
       </button>
     </div>
