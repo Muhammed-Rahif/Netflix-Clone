@@ -74,3 +74,8 @@
   color: black;
   opacity: 1 !important;
 }
+@media (max-width:767px) {
+  .sub-title{
+    display: none;
+  }
+}
