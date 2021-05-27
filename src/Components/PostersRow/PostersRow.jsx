@@ -59,6 +59,7 @@ function PostersRow({ postersTitle, postersList }) {
               );
             } else {
               prevItm = itm;
+              return null;
             }
           })}
         </React.Fragment>

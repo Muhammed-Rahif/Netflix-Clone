@@ -13,6 +13,7 @@ function Home(props) {
     window.onload = () => {
       const observer = lozad(); // lazy loads elements with default selector as '.lozad'
       observer.observe();
+      console.log(process.env);
     };
   });
 
