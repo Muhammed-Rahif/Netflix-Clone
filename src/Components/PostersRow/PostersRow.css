@@ -20,6 +20,7 @@
   transition: transform 500ms;
   z-index: 65;
   margin: 0.3rem;
+  cursor: pointer;
 }
 .posters-wrapper:focus-within .poster-card,
 .posters-wrapper:hover .poster-card {
@@ -87,4 +88,9 @@
 .poster-subtitle {
   text-shadow: 4px 4px 6px black;
   font-size: x-small;
+}
+.youtube-video{
+  padding: 1rem;
+  height: 25rem;
+  width: 100%;
 }

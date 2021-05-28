@@ -45,7 +45,7 @@ function Navbar(props) {
           <ul className="navbar-nav">
             <li className="nav-item">
               <Link
-                className="nav-link active"
+                className="nav-link"
                 aria-current="page"
                 to="/tv-shows"
               >

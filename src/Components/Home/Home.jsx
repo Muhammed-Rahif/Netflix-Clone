@@ -106,6 +106,7 @@ function Home(props) {
         title={headerBanner ? headerBanner.title : "Loading.."}
         subtitle={headerBanner ? headerBanner.overview : "Loading.."}
         imageUrl={headerBanner ? baseImgUrl + headerBanner.backdrop_path : ""}
+        id={headerBanner ? headerBanner.id : ""}
       />
       <PostersRow
         postersTitle={trending ? "Trending on Netflix" : ""}

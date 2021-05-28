@@ -71,11 +71,19 @@
 }
 .play-button {
   background-color: #e6e6e6;
-  color: black;
+  color: #111;
   opacity: 1 !important;
 }
-@media (max-width:767px) {
-  .sub-title{
+.play-button i:hover {
+  color: #e6e6e6;
+}
+.play-button:hover {
+  background-color: #111;
+  color: #e6e6e6;
+  opacity: 0.78 !important;
+}
+@media (max-width: 767px) {
+  .sub-title {
     display: none;
   }
 }

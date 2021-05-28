@@ -8,6 +8,7 @@
   height: 25%;
   top: 3.5rem;
   opacity: 0;
+  transition: 0.5s;
 }
 .play-button-wrapper button i {
   transition: 0.38s;
@@ -32,7 +33,7 @@
 .play-button-wrapper button i {
   transform: scale(0.85);
 }
-@media (max-width:767px) {
+@media (max-width: 767px) {
   .play-button-wrapper button i {
     transition: 0.38s;
     font-size: 2.75rem;
