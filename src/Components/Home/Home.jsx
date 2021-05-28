@@ -31,7 +31,6 @@ function Home(props) {
       )
       .then((response) => {
         let data = response.data.results;
-        setHeaderBanner(data[Math.floor(Math.random() * data.length + 1)]);
         setTrending(data.slice(0, 8));
       });
 
@@ -50,6 +49,7 @@ function Home(props) {
       )
       .then((response) => {
         let data = response.data.results;
+        setHeaderBanner(data[Math.floor(Math.random() * data.length + 1)]);
         setAction(data.slice(0, 8));
       });
 

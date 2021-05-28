@@ -7,6 +7,14 @@ function Navbar(props) {
   const [openSearch, setOpenSearch] = useState(false);
 
   useEffect(() => {
+    window.onscroll = () => {
+      console.log(window.pageYOffset);
+      if (window.pageYOffset !== 0) {
+        $("nav").css({ "line-height": "0.3" });
+      }else{
+        $("nav").css({ "line-height": "1.5" });
+      }
+    };
     //Jquery
     if (window.innerWidth > 400) {
       $(".search,.search-input").hover(
@@ -22,11 +30,11 @@ function Navbar(props) {
       );
     } else {
       $(".search").click(() => {
-        setOpenSearch((openSearch)=>!openSearch);
+        setOpenSearch((openSearch) => !openSearch);
       });
     }
   }, []);
-  
+
   useEffect(() => {
     if (openSearch) {
       $(".search-input").css({ width: "18rem", padding: ".3rem" });
@@ -36,19 +44,30 @@ function Navbar(props) {
   }, [openSearch]);
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-black">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
       <div className="container-fluid">
-        <Link className="navbar-brand" to="/">
-          <img src="https://image.tmdb.org/t/p/w500/wwemzKWzjKYJFfCeiB57q3r4Bcm.png" alt="Netflix" width="124" />
+        <Link
+          className="navbar-brand"
+          to="/"
+          onClick={() => {
+            window.location.href = "/";
+          }}
+        >
+          <img
+            src="https://image.tmdb.org/t/p/w500/wwemzKWzjKYJFfCeiB57q3r4Bcm.png"
+            alt="Netflix"
+            width="124"
+          />
         </Link>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
+          <li className="nav-item">
+              <Link className="nav-link" to="/upcoming">
+                Upcoming
+              </Link>
+            </li>
             <li className="nav-item">
-              <Link
-                className="nav-link"
-                aria-current="page"
-                to="/tv-shows"
-              >
+              <Link className="nav-link" aria-current="page" to="/tv-shows">
                 TV Shows
               </Link>
             </li>
@@ -62,11 +81,6 @@ function Navbar(props) {
                 Recently Added
               </Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/my-list">
-                My List
-              </Link>
-            </li>
           </ul>
         </div>
         <div className="ml-auto text-white d-flex align-items-center justify-content-center">
@@ -74,7 +88,7 @@ function Navbar(props) {
           <input
             type="text"
             className=" search-input"
-            placeholder={"Movies, TV Shows..."}
+            placeholder={" Movies, TV Shows..."}
           />
         </div>
       </div>

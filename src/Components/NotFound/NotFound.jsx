@@ -11,7 +11,7 @@ function NotFound(props) {
       <div
         className="content"
         style={{
-          backgroundImage: `url('./images/not-found.jpg')`,
+          backgroundImage: `url('https://i.picsum.photos/id/957/1920/1080.jpg?hmac=j6IpszzgaWjKITEaLB7QiwR-han900vlNJ5vfezaGQE')`,
         }}
       >
         <div className="dark-shade-top"></div>

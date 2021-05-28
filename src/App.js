@@ -1,17 +1,17 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import All from "./Components/Upcoming/Upcoming";
 // components
 import Home from "./Components/Home/Home";
 import NotFound from "./Components/NotFound/NotFound";
 
 function App() {
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router>
       <Switch>
-        <Route path="/" component={Home}>
-          <Home />
-        </Route>
-        <Route path="" component={NotFound} />
+        <Route exact path="/" component={Home} />
+        <Route path="/upcoming" component={All} />
+        <Route path="*" component={NotFound} />
       </Switch>
     </Router>
   );
