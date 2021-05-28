@@ -40,9 +40,11 @@
 .poster-card .img {
   display: block;
   max-width: 100%;
+  min-height: 14rem;
 }
 .poster-text-wrapper {
   padding: 1rem;
+  padding-bottom: 0rem !important;
   color: whitesmoke;
   position: absolute;
   bottom: 0;
@@ -80,18 +82,9 @@
 .poster-title {
   text-shadow: 4px 4px 6px black;
   font-weight: bold;
+  font-size:small;
 }
 .poster-subtitle {
   text-shadow: 4px 4px 6px black;
-}
-@media (max-width:767px) {
-  .poster-title {
-    text-shadow: 4px 4px 6px black;
-    font-weight: bold;
-    font-size: small;
-  }
-  .poster-subtitle {
-    text-shadow: 4px 4px 6px black;
-    font-size: small;
-  }
+  font-size: x-small;
 }
