@@ -116,13 +116,25 @@ function Home(props) {
         postersList={popular ? popular : []}
       />
       <PostersRow
-        postersTitle={originals ? "Orignials on Ntflix" : ""}
+        postersTitle={originals ? "Orignials on Netflix" : ""}
         postersList={originals ? originals : []}
       />
-      <PostersRow postersTitle={horror ? "Horror" : ""} postersList={horror ? horror : []} />
-      <PostersRow postersTitle={romance ? "Romance" : ""} postersList={romance ? romance : []} />
-      <PostersRow postersTitle={comedy ? "Comedy" : ""} postersList={comedy ? comedy : []} />
-      <PostersRow postersTitle={action ? "Action" : ""} postersList={action ? action : []} />
+      <PostersRow
+        postersTitle={horror ? "Horror Films" : ""}
+        postersList={horror ? horror : []}
+      />
+      <PostersRow
+        postersTitle={romance ? "Romance Movies" : ""}
+        postersList={romance ? romance : []}
+      />
+      <PostersRow
+        postersTitle={comedy ? "Comedy Movies" : ""}
+        postersList={comedy ? comedy : []}
+      />
+      <PostersRow
+        postersTitle={action ? "Action Films" : ""}
+        postersList={action ? action : []}
+      />
       <PostersRow
         postersTitle={family ? "Family Entertainment" : ""}
         postersList={family ? family : []}
