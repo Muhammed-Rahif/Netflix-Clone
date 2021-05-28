@@ -49,9 +49,6 @@ function Navbar(props) {
         <Link
           className="navbar-brand"
           to="/"
-          onClick={() => {
-            window.location.href = "/";
-          }}
         >
           <img
             src="https://image.tmdb.org/t/p/w500/wwemzKWzjKYJFfCeiB57q3r4Bcm.png"
