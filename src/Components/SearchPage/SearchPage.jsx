@@ -13,15 +13,17 @@ function SearchPage(props) {
   });
 
   useEffect(() => {
-    axios
-      .get(
-        `search/movie?query=${searchQuery}&api_key=${process.env.REACT_APP_API_KEY}&page=1`
-      )
-      .then((response) => {
-        let data = response.data.results;
-        setResultsArray(data);
-        console.log(data);
-      });
+    if (searchQuery) {
+      axios
+        .get(
+          `search/movie?query=${searchQuery}&api_key=${process.env.REACT_APP_API_KEY}&page=1`
+        )
+        .then((response) => {
+          let data = response.data.results;
+          setResultsArray(data);
+          console.log(data);
+        });
+    }
   }, [searchQuery]);
 
   return (
