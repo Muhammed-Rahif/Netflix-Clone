@@ -8,9 +8,9 @@ function Navbar(props) {
   const [searchQuery, setSearchQuery] = useState();
   const history = useHistory();
 
-  var handleChangeSearch = (e) => {
-    setSearchQuery(e.target.value);
-    history.push("/search?query=" + searchQuery);
+  var handleChangeSearch = (value) => {
+    setSearchQuery(value);
+    history.push("/search?query=" + value);
   };
 
   useEffect(() => {
@@ -94,7 +94,7 @@ function Navbar(props) {
             className="search-input"
             placeholder={" Movies, TV Shows..."}
             onChange={(e) => {
-              handleChangeSearch(e);
+              handleChangeSearch(e.target.value);
             }}
             value={searchQuery}
           />
