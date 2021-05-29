@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import VideoCards from "../VideoCards/VideoCards";
 import axios from "../../configs/axios";
 
-function All(props) {
+function UpcomingMovies(props) {
   const [all, setAll] = useState();
 
   useEffect(() => {
@@ -27,4 +27,4 @@ function All(props) {
   );
 }
 
-export default All;
+export default UpcomingMovies;

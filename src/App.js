@@ -8,6 +8,7 @@ import NotFound from "./Components/NotFound/NotFound";
 import Navbar from "./Components/Navbar/Navbar";
 import TrendingShows from "./Components/TrendingShows/TrendingShows";
 import TopRated from "./Components/TopRated/TopRated"
+import SearchPage from "./Components/SearchPage/SearchPage";
 
 function App() {
   return (
@@ -19,8 +20,9 @@ function App() {
         <Route path="/top-rated" component={TopRated} />
         <Route path="/trending-shows" component={TrendingShows} />
         <Route path="/family-entertainment" component={FamilyEntertainment} />
+        <Route path="/search" component={SearchPage} />
         <Route path="" component={NotFound} />
-      </Switch> 
+      </Switch>
     </Router>
   );
 }

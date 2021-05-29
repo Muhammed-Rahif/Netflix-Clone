@@ -1,16 +1,23 @@
 import React, { useEffect, useState } from "react";
 import "./Navbar.css";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import $ from "jquery";
 
 function Navbar(props) {
   const [openSearch, setOpenSearch] = useState(false);
+  const [searchQuery, setSearchQuery] = useState();
+  const history = useHistory();
+
+  var handleChangeSearch = (e) => {
+    setSearchQuery(e.target.value);
+    history.push("/search?query=" + searchQuery);
+  };
 
   useEffect(() => {
     window.onscroll = () => {
       if (window.pageYOffset !== 0) {
         $("nav").css({ "line-height": "0.3" });
-      }else{
+      } else {
         $("nav").css({ "line-height": "1.5" });
       }
     };
@@ -45,10 +52,7 @@ function Navbar(props) {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
       <div className="container-fluid">
-        <Link
-          className="navbar-brand"
-          to="/"
-        >
+        <Link className="navbar-brand" to="/">
           <img
             src="https://image.tmdb.org/t/p/w500/wwemzKWzjKYJFfCeiB57q3r4Bcm.png"
             alt="Netflix"
@@ -62,13 +66,17 @@ function Navbar(props) {
                 Top Rated
               </Link>
             </li>
-          <li className="nav-item">
+            <li className="nav-item">
               <Link className="nav-link" to="/upcoming-movies">
                 Upcoming Movies
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" aria-current="page" to="/trending-shows">
+              <Link
+                className="nav-link"
+                aria-current="page"
+                to="/trending-shows"
+              >
                 Trending Shows
               </Link>
             </li>
@@ -83,8 +91,12 @@ function Navbar(props) {
           <i className="fas fa-search fa-lg search"></i>
           <input
             type="text"
-            className=" search-input"
+            className="search-input"
             placeholder={" Movies, TV Shows..."}
+            onChange={(e) => {
+              handleChangeSearch(e);
+            }}
+            value={searchQuery}
           />
         </div>
       </div>

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import VideoCards from "../VideoCards/VideoCards";
 import axios from "../../configs/axios";
 
-function TrendingShows(props) {
+function FamilyEntertainment(props) {
   const [familyFilms, setFamilyFilms] = useState();
 
   useEffect(() => {
@@ -27,4 +27,4 @@ function TrendingShows(props) {
   );
 }
 
-export default TrendingShows;
+export default FamilyEntertainment;
