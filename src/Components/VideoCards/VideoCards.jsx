@@ -59,7 +59,7 @@ function VideoCards({ cardsArray, title = "Loading..", getNewCardsUrl }) {
     if (cardsArray.length !== 0) {
       axios
         .get(
-          `movie/${cardsArray[0].id}/videos?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
+          `movie/${cardsArray[[Math.floor((Math.random() * cardsArray.length))]].id}/videos?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
         )
         .then((response) => {
           if (response.data.results.length !== 0) {
@@ -68,7 +68,6 @@ function VideoCards({ cardsArray, title = "Loading..", getNewCardsUrl }) {
           }
         });
     }
-    console.log(cards);
     setCards(cardsArray);
   }, [cardsArray]);
 

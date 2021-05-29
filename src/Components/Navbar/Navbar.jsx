@@ -57,24 +57,24 @@ function Navbar(props) {
         </Link>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
+            <li className="nav-item">
+              <Link className="nav-link" to="/top-rated">
+                Top Rated
+              </Link>
+            </li>
           <li className="nav-item">
               <Link className="nav-link" to="/upcoming-movies">
                 Upcoming Movies
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" aria-current="page" to="/tv-shows">
-                TV Shows
+              <Link className="nav-link" aria-current="page" to="/trending-shows">
+                Trending Shows
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/movies">
-                Movies
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/recents">
-                Recently Added
+              <Link className="nav-link" to="/family-entertainment">
+                Family Entertainment
               </Link>
             </li>
           </ul>

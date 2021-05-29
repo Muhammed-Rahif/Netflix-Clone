@@ -48,7 +48,7 @@ function Home(props) {
       )
       .then((response) => {
         let data = response.data.results;
-        setHeaderBanner(data[Math.floor(Math.random() * data.length + 1)]);
+        setHeaderBanner(data[Math.floor(Math.random() * data.length)]);
         setAction(data.slice(0, 8));
       });
 

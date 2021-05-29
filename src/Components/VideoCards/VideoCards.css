@@ -26,7 +26,7 @@
   justify-content: center;
 }
 .video-card {
-  min-height: 12rem;
+  min-height: 28rem;
   border: 1px transparent solid;
   transition: 0.5s;
   width: 22vw;
@@ -38,7 +38,6 @@
 .video-card:focus {
   background: #e6e6e60e;
   border: 1px #e6e6e683 solid;
-  min-height: 13.5rem;
   opacity: 1;
 }
 .video-card img {
@@ -46,7 +45,6 @@
   position: relative;
   width: 100%;
   background: #222;
-  min-height: 12rem !important;
 }
 .video-card h4 {
   font-weight: bold;
