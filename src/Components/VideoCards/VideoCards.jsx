@@ -1,34 +1,26 @@
 import React, { useEffect, useState } from "react";
 import "./VideoCards.css";
 import YouTube from "react-youtube";
+import $ from "jquery";
 import { baseImgUrl } from "../../configs/urls";
 import axios from "../../configs/axios";
 
-function VideoCards({ cardsArray, title = "" }) {
+var page = 1;
+function VideoCards({ cardsArray, title = "Loading..", getNewCardsUrl }) {
   const [cards, setCards] = useState();
   const [ytVideoId, setYtVideoId] = useState();
 
   useEffect(() => {
-    if (cardsArray.length !== 0) {
-      axios
-        .get(
-          `movie/${cardsArray[0].id}/videos?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
-        )
-        .then((response) => {
-          console.log(response.data);
-          if (response.data.results.length !== 0) {
-            console.log(response.data.results[0]);
-            let movieData = response.data.results[0];
-            setYtVideoId(movieData.key);
-          }
-        });
-    }
-
-    let arrangedCardsArray = new Array(Math.ceil(cardsArray.length / 3))
-      .fill()
-      .map((_) => cardsArray.splice(0, 3));
-    setCards(arrangedCardsArray);
-  }, [cardsArray]);
+    $(window).scroll(function () {
+      if (
+        (($(window).scrollTop() + $(window).height()) / $(document).height()) *
+          100 >
+        89
+      ) {
+        getNewCards();
+      }
+    });
+  }, []);
 
   var updateYtVideoId = (id) => {
     axios
@@ -36,11 +28,14 @@ function VideoCards({ cardsArray, title = "" }) {
         `movie/${id}/videos?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
       )
       .then((response) => {
-        console.log(response.data);
         if (response.data.results.length !== 0) {
-          console.log(response.data.results[0]);
           let movieData = response.data.results[0];
           setYtVideoId(movieData.key);
+          window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth",
+          });
         } else {
           alert("Sorry, No related videos found in YouTube..!");
         }
@@ -50,6 +45,32 @@ function VideoCards({ cardsArray, title = "" }) {
         alert("Sorry, No related videos found in YouTube..!");
       });
   };
+
+  var getNewCards = () => {
+    page++;
+    axios.get(getNewCardsUrl + page).then((response) => {
+      let data = response.data.results;
+      console.log(data);
+      setCards((cards) => [...cards, ...data]);
+    });
+  };
+
+  useEffect(() => {
+    if (cardsArray.length !== 0) {
+      axios
+        .get(
+          `movie/${cardsArray[0].id}/videos?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
+        )
+        .then((response) => {
+          if (response.data.results.length !== 0) {
+            let movieData = response.data.results[0];
+            setYtVideoId(movieData.key);
+          }
+        });
+    }
+    console.log(cards);
+    setCards(cardsArray);
+  }, [cardsArray]);
 
   return (
     <div className="video-cards-wrapper">
@@ -63,66 +84,38 @@ function VideoCards({ cardsArray, title = "" }) {
           className="youtube-video"
         />
       )}
-      {cards &&
-        cards.map((itm, indx) => {
-          if (window.innerWidth > 767) {
-            return (
-              <div className="video-card-row">
-                {itm.map((itm) => {
-                  return (
-                    <div
-                      className="video-card"
-                      onClick={() => {
-                        updateYtVideoId(itm.id);
-                        window.scrollTo({
-                          top: 0,
-                          left: 0,
-                          behavior: "smooth",
-                        });
-                      }}
-                    >
-                      <img
-                        src={`${baseImgUrl + itm.backdrop_path}`}
-                        alt="Something"
-                      />
-                      <h4 className="text-white">{itm.title}</h4>
-                      <p className="text-white">
-                        {itm.overview.substring(0, 120) + "..."}
-                      </p>
-                    </div>
-                  );
-                })}
-              </div>
-            );
-          } else {
-            return itm.map((itm) => {
+      <div className="video-card-row">
+        {cards &&
+          cards.map((itm, key) => {
+            if (itm.poster_path) {
               return (
-                <div className="video-card-row">
-                  <div
-                    className="video-card"
-                    onClick={() => {
-                      updateYtVideoId(itm.id);
-                      window.scrollTo({
-                        top: 0,
-                        left: 0,
-                        behavior: "smooth",
-                      });
-                    }}
-                  >
-                    <img
-                      src={`${baseImgUrl + itm.backdrop_path}`}
-                      alt="Something"
-                    />
+                <div
+                  className="video-card"
+                  onClick={() => {
+                    updateYtVideoId(itm.id);
+                  }}
+                  key={key}
+                >
+                  <div className="dark-shade-top"></div>
+                  <img
+                    src={`${baseImgUrl + itm.poster_path}`}
+                    alt={itm.title}
+                  />
+                  <i className="far fa-play-circle video-cards-play-button fa-3x text-white"></i>
+                  <div className="video-card-text-wrapper">
                     <h4 className="text-white">{itm.title}</h4>
                     <p className="text-white">
                       {itm.overview.substring(0, 120) + "..."}
                     </p>
                   </div>
+                  <div className="dark-shade-bottom"></div>
                 </div>
               );
-            });
-          }
-        })}
+            } else {
+              return null;
+            }
+          })}
+      </div>
     </div>
   );
 }

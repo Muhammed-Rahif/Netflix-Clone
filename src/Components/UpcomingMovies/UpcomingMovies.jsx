@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "../Navbar/Navbar";
 import VideoCards from "../VideoCards/VideoCards";
 import axios from "../../configs/axios";
 
@@ -8,7 +7,9 @@ function All(props) {
 
   useEffect(() => {
     axios
-      .get(`movie/upcoming?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`)
+      .get(
+        `movie/upcoming?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`
+      )
       .then((response) => {
         let data = response.data.results;
         setAll(data);
@@ -17,8 +18,11 @@ function All(props) {
 
   return (
     <React.Fragment>
-      <Navbar />
-      <VideoCards title={all ? "Upcoming Movies" : "Loading.."} cardsArray={all ? all : []} />
+      <VideoCards
+        title={all ? "Upcoming Movies" : "Loading.."}
+        cardsArray={all ? all : []}
+        getNewCardsUrl={`movie/upcoming?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=`}
+      />
     </React.Fragment>
   );
 }

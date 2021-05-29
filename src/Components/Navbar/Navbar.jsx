@@ -8,7 +8,6 @@ function Navbar(props) {
 
   useEffect(() => {
     window.onscroll = () => {
-      console.log(window.pageYOffset);
       if (window.pageYOffset !== 0) {
         $("nav").css({ "line-height": "0.3" });
       }else{
@@ -59,8 +58,8 @@ function Navbar(props) {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
           <li className="nav-item">
-              <Link className="nav-link" to="/upcoming">
-                Upcoming
+              <Link className="nav-link" to="/upcoming-movies">
+                Upcoming Movies
               </Link>
             </li>
             <li className="nav-item">

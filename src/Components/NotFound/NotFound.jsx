@@ -2,12 +2,10 @@ import React from "react";
 import "./NotFound.css";
 import { Link } from "react-router-dom";
 // Components
-import Navbar from "../Navbar/Navbar";
 
 function NotFound(props) {
   return (
     <div className="row h-100">
-      <Navbar />
       <div
         className="content"
         style={{

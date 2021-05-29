@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import axios from "../../configs/axios";
 import { baseImgUrl } from "../../configs/urls";
 // components
-import Navbar from "../Navbar/Navbar";
 import HeaderBanner from "../HeaderBanner/HeaderBanner";
 import PostersRow from "../PostersRow/PostersRow";
 import Footer from "../Footer/Footer";
@@ -101,7 +100,6 @@ function Home(props) {
 
   return (
     <div className="row">
-      <Navbar />
       <HeaderBanner
         title={headerBanner ? headerBanner.title : "Loading.."}
         subtitle={headerBanner ? headerBanner.overview : "Loading.."}

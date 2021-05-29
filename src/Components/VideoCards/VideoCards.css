@@ -14,32 +14,39 @@
   font-weight: bold;
   color: #e6e6e6;
 }
+.video-card-text-wrapper p {
+  text-shadow: 2px 2px 4px black;
+}
 .video-card-row {
-  width: 100%;
+  width: 100vw;
   height: auto;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 }
 .video-card {
-  height: auto;
+  min-height: 12rem;
   border: 1px transparent solid;
   transition: 0.5s;
-  padding: 0.7rem;
-  width: 30vw;
+  width: 22vw;
   margin: 1rem;
+  position: relative;
   cursor: pointer;
 }
 .video-card:hover,
 .video-card:focus {
   background: #e6e6e60e;
   border: 1px #e6e6e683 solid;
+  min-height: 13.5rem;
+  opacity: 1;
 }
 .video-card img {
   height: auto;
   position: relative;
   width: 100%;
-  min-height: 13.5rem;
+  background: #222;
+  min-height: 12rem !important;
 }
 .video-card h4 {
   font-weight: bold;
@@ -48,7 +55,61 @@
   width: 100%;
   padding: 1rem;
 }
-@media (max-width:767px) {
+.video-card-text-wrapper {
+  position: absolute;
+  bottom: 0;
+  padding: 0.7rem;
+  z-index: 65;
+  transition: 0.5s;
+  opacity: 0;
+}
+.video-card:hover .dark-shade-top {
+  opacity: 0;
+}
+.video-card:hover .dark-shade-bottom {
+  opacity: 0;
+}
+.video-card:hover .video-card-text-wrapper {
+  opacity: 1;
+}
+.dark-shade-top {
+  position: absolute;
+  opacity: 1;
+  transition: 0.5s;
+  top: 0;
+  height: 6rem;
+  background-image: linear-gradient(
+    rgba(17, 17, 17, 1),
+    rgba(255, 255, 255, 0)
+  );
+}
+.dark-shade-bottom {
+  position: absolute;
+  opacity: 1;
+  transition: 0.5s;
+  bottom: 0;
+  height: 6rem;
+  background-image: linear-gradient(
+    rgba(17, 17, 17, 1),
+    rgba(255, 255, 255, 0)
+  );
+}
+.video-cards-play-button {
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  opacity: 0;
+  transition: 0.5s;
+  transform: translate(-50%, -50%);
+}
+.video-card:hover .video-cards-play-button {
+  opacity: 1;
+}
+.video-cards-play-button:hover {
+  color: #e50914 !important;
+}
+
+@media (max-width: 767px) {
   .video-card {
     height: auto;
     border: 1px transparent solid;
