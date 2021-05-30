@@ -3,7 +3,7 @@ import VideoCards from "../VideoCards/VideoCards";
 import axios from "../../configs/axios";
 
 function FamilyEntertainment(props) {
-  const [familyFilms, setFamilyFilms] = useState();
+  const [familyEntertainment, setFamilyEntertainment] = useState();
 
   useEffect(() => {
     axios
@@ -12,16 +12,16 @@ function FamilyEntertainment(props) {
       )
       .then((response) => {
         let data = response.data.results;
-        setFamilyFilms(data);
+        setFamilyEntertainment(data);
       });
   }, []);
 
   return (
     <React.Fragment>
       <VideoCards
-        cardsArray={familyFilms ? familyFilms : []}
+        cardsArray={familyEntertainment ? familyEntertainment : []}
         getNewCardsUrl={`discover/movie?api_key=${process.env.REACT_APP_API_KEY}&with_genres=10751&page=`}
-        title={familyFilms ? "Family Films" : "Loading.."}
+        title={familyEntertainment ? "Family Films" : "Loading.."}
       />
     </React.Fragment>
   );

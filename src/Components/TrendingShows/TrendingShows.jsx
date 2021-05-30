@@ -21,7 +21,7 @@ function TrendingShows(props) {
       <VideoCards
         cardsArray={trendingShows ? trendingShows : []}
         getNewCardsUrl={`trending/tv/week?api_key=${process.env.REACT_APP_API_KEY}&page=`}
-        title={trendingShows ? "Trending Show on Netflix" : "Loading.."}
+        title={trendingShows ? "Trending Shows on Netflix" : "Loading.."}
       />
     </React.Fragment>
   );
