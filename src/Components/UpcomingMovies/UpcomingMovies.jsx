@@ -22,6 +22,7 @@ function UpcomingMovies(props) {
         title={all ? "Upcoming Movies" : "Loading.."}
         cardsArray={all ? all : []}
         getNewCardsUrl={`movie/upcoming?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=`}
+        type="movie"
       />
     </React.Fragment>
   );

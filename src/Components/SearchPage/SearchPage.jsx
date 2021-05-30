@@ -34,6 +34,7 @@ function SearchPage(props) {
         }
         cardsArray={resultsArray ? resultsArray : []}
         getNewCardsUrl={`search/movie?query=${searchQuery}&api_key=${process.env.REACT_APP_API_KEY}&page=`}
+        type="movie"
       />
     </React.Fragment>
   );

@@ -6,7 +6,12 @@ import { baseImgUrl } from "../../configs/urls";
 import axios from "../../configs/axios";
 
 var page = 1;
-function VideoCards({ cardsArray, title = "Loading..", getNewCardsUrl }) {
+function VideoCards({
+  cardsArray,
+  title = "Loading..",
+  getNewCardsUrl,
+  type = "movie",
+}) {
   const [cards, setCards] = useState();
   const [ytVideoId, setYtVideoId] = useState();
 
@@ -59,7 +64,9 @@ function VideoCards({ cardsArray, title = "Loading..", getNewCardsUrl }) {
     if (cardsArray.length !== 0) {
       axios
         .get(
-          `movie/${cardsArray[[Math.floor((Math.random() * cardsArray.length))]].id}/videos?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
+          `${type}/${
+            cardsArray[[Math.floor(Math.random() * cardsArray.length)]].id
+          }/videos?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
         )
         .then((response) => {
           if (response.data.results.length !== 0) {
