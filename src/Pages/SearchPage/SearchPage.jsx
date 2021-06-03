@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import VideoCards from "../VideoCards/VideoCards";
+import VideoCards from "../../Components/VideoCards/VideoCards";
 import axios from "../../configs/axios";
 
 function SearchPage(props) {

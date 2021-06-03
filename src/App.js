@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // components
-import UpcomingMovies from "./Components/UpcomingMovies/UpcomingMovies";
-import FamilyEntertainment from "./Components/FamilyEntertainment/FamilyEntertainment";
-import Home from "./Components/Home/Home";
-import NotFound from "./Components/NotFound/NotFound";
+import UpcomingMovies from "./Pages/UpcomingMovies/UpcomingMovies";
+import FamilyEntertainment from "./Pages/FamilyEntertainment/FamilyEntertainment";
+import Home from "./Pages/Home/Home";
+import NotFound from "./Pages/NotFound/NotFound";
 import Navbar from "./Components/Navbar/Navbar";
-import TrendingShows from "./Components/TrendingShows/TrendingShows";
-import TopRated from "./Components/TopRated/TopRated";
-import SearchPage from "./Components/SearchPage/SearchPage";
+import TrendingShows from "./Pages/TrendingShows/TrendingShows";
+import TopRated from "./Pages/TopRated/TopRated";
+import SearchPage from "./Pages/SearchPage/SearchPage";
 
 function App() {
   useEffect(() => {

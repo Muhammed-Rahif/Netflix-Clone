@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import axios from "../../configs/axios";
 import { baseImgUrl } from "../../configs/urls";
 // components
-import HeaderBanner from "../HeaderBanner/HeaderBanner";
-import PostersRow from "../PostersRow/PostersRow";
-import Footer from "../Footer/Footer";
+import HeaderBanner from "../../Components/HeaderBanner/HeaderBanner";
+import PostersRow from "../../Components/PostersRow/PostersRow";
+import Footer from "../../Components/Footer/Footer";
 
 // Lozad
 import lozad from "lozad";
