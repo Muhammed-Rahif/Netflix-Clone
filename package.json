@@ -1,7 +1,7 @@
 {
   "name": "react-netflix-clone",
   "homepage": "https://muhammed-rahif.github.io/Netflix-Clone",
-  "version": "1.0.0",
+  "version": "5.0.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",

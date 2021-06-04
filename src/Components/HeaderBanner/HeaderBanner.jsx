@@ -23,7 +23,7 @@ function HeaderBanner({ imageUrl, title, subtitle, id }) {
       })
       .catch((err) => {
         console.log(err);
-        alert("Sorry, No related videos found in YouTube..!");
+        alert(err.message);
       });
   };
 
@@ -50,7 +50,7 @@ function HeaderBanner({ imageUrl, title, subtitle, id }) {
               <i className="fas fa-play"></i> Play
             </button>
             <button className="btn btn-secondary">
-              <i className="fas fa-plus"></i> My Playlist
+              <i className="fas fa-plus"></i> Playlist
             </button>
           </div>
         </div>

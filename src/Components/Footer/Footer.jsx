@@ -8,7 +8,7 @@ function Footer(props) {
       <div className="footer-content">
         <img
           className="footer-netflix-logo"
-          src="https://image.tmdb.org/t/p/w500/wwemzKWzjKYJFfCeiB57q3r4Bcm.png"
+          src="https://image.tmdb.org/t/p/original/wwemzKWzjKYJFfCeiB57q3r4Bcm.png"
           alt="Netflix Clone React made by Rahif"
         />
         <p>

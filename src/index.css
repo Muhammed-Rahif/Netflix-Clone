@@ -1,19 +1,21 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-.small-device{
-  display: none !important;
-}
-.large-device{
-  display: block !important;
-}
-@media (max-width:767px) {
-  .large-device{
+@media (min-width: 767px) {
+  .small-device {
     display: none !important;
   }
-  .small-device{
+  .large-device {
+    display: flex !important;
+  }
+}
+@media (max-width: 767px) {
+  .large-device {
+    display: none !important;
+  }
+  .small-device {
     display: block !important;
   }
 }

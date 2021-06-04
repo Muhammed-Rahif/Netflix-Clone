@@ -33,7 +33,7 @@ function PostersRow({ postersTitle, postersList }) {
       })
       .catch((err) => {
         console.log(err);
-        alert("Sorry, No related videos found in YouTube..!");
+        alert(err.message);
       });
   };
 

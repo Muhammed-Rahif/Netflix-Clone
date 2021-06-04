@@ -43,6 +43,7 @@ function Navbar(props) {
 
   useEffect(() => {
     if (openSearch) {
+      $(".search-input").focus();
       $(".search-input").css({ width: "18rem", padding: ".3rem" });
     } else {
       $(".search-input").css({ width: "0rem", padding: "0rem" });
@@ -54,7 +55,7 @@ function Navbar(props) {
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
           <img
-            src="https://image.tmdb.org/t/p/w500/wwemzKWzjKYJFfCeiB57q3r4Bcm.png"
+            src="https://image.tmdb.org/t/p/original/wwemzKWzjKYJFfCeiB57q3r4Bcm.png"
             alt="Netflix"
             width="124"
           />
@@ -88,6 +89,17 @@ function Navbar(props) {
           </ul>
         </div>
         <div className="ml-auto text-white d-flex align-items-center justify-content-center">
+          <button
+            className="navbar-toggler mr-1"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
           <i className="fas fa-search fa-lg search"></i>
           <input
             type="text"
