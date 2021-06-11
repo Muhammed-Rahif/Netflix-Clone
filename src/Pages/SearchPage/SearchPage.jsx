@@ -21,7 +21,6 @@ function SearchPage(props) {
         .then((response) => {
           let data = response.data.results;
           setResultsArray(data);
-          console.log(data);
         });
     }
   }, [searchQuery]);

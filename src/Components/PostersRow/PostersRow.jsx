@@ -22,9 +22,7 @@ function PostersRow({ postersTitle, postersList }) {
         `movie/${id}/videos?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
       )
       .then((response) => {
-        console.log(response.data);
         if (response.data.results.length !== 0) {
-          console.log(response.data.results[0]);
           let movieData = response.data.results[0];
           setYtVideoId(movieData.key);
         } else {
